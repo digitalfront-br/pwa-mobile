@@ -1,4 +1,4 @@
-# Diretorios basicos para um pwa com vuejs + uikit + sass
+# PWA com Vuejs + UIkit + sass
 
 ## Project setup
 ```
