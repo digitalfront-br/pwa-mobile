@@ -1,10 +1,13 @@
 const menuLinks = [
   {
     "link": "Home",
-    "url": "/"
+    "slug": "/",
+    "component": "Home.vue"
   },
   {
     "link": "Sobre",
-    "url": "/sobre"
+    "slug": "/sobre",
+    "component": "Sobre.vue"
   },
-]
+];
+export default menuLinks

@@ -10,10 +10,30 @@ const routes = [
     component: () => import("@/views/pages/Home.vue")
   },
   {
-    path: "/sobre",
-    name: "sobre",
-    component: () => import("@/views/pages/Sobre.vue")
-  }
+    path: "/institucional",
+    name: "institucional",
+    component: () => import("@/views/pages/Institucional.vue")
+  },
+  {
+    path: "/cursos",
+    name: "cursos",
+    component: () => import("@/views/pages/Cursos.vue")
+  },
+  {
+    path: "/centro-pesquisa",
+    name: "centro-pesquisa",
+    component: () => import("@/views/pages/CentroPesquisa.vue")
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: () => import("@/views/pages/Blog.vue")
+  },
+  {
+    path: "/contato",
+    name: "contato",
+    component: () => import("@/views/pages/Contato.vue")
+  },
 ];
 
 const router = new VueRouter({
