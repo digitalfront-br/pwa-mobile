@@ -1,4 +1,4 @@
-# base
+# Diretorios basicos para um pwa com vuejs + uikit + sass
 
 ## Project setup
 ```
