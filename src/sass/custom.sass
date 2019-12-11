@@ -4,6 +4,10 @@
     li
       a
         font-size: 1.3rem
+.uk-divider-small::after
+  border-width: 3px !important
+  width: 50px !important
+  border-color: #fff !important
 .router-link-exact-active.router-link-active
   color: #fff !important
 .menu
@@ -11,7 +15,9 @@
 .menu-icon
   color: $global-primary-background !important
 .main-menu
-  background: linear-gradient(0, #e0e0e0, transparent)
+  background: linear-gradient(0, #e0e0e0, #fff)
   border-bottom: 1px solid #fafafa
-
+.post
+  img
+    width: 100%
 @import "imports"

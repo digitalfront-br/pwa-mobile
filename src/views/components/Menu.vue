@@ -3,6 +3,12 @@
     <div class="uk-flex uk-flex-column uk-text-center uk-offcanvas-bar">
       <button class="uk-offcanvas-close" type="button" uk-close></button>
       <ul  class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-nav-parent-icon" uk-nav="">
+        <p>{{ count }}</p>
+  <p>
+    <button @click="increment">+</button>
+    <button @click="listPosts">postagens</button>
+    <button @click="decrement">-</button>
+  </p>
         <li v-for="item in menuLinks" v-bind:key="item.id">
           <router-link  :to="item.slug" class="uk-text-uppercase uk-text-bold">{{ item.link }}</router-link>
         </li>
@@ -10,7 +16,7 @@
       <div>
         <div class="uk-grid-small uk-child-width-auto uk-flex-inline uk-grid" uk-grid="">
           <div class="uk-first-column">
-            <a class="uk-icon-button uk-icon" href="#" uk-icon="icon: facebook"></a>
+            <a  class="uk-icon-button uk-icon" href="#" uk-icon="icon: facebook"></a>
           </div>
           <div>
             <a class="uk-icon-button uk-icon" href="#" uk-icon="icon: twitter"></a>
@@ -25,6 +31,7 @@
       </div>
 
     </div>
+    
   </div>
 </template>
 <script>
@@ -78,8 +85,22 @@ export default {
     ]
     }
   },
-  mounted(){
-    console.log("links", this.menuLinks);
+  computed: {
+    count () {
+	    return this.$store.state.count
+    }
+  },
+  methods: {
+    increment () {
+      this.$store.commit('increment')
+    },
+    decrement () {
+    	this.$store.commit('decrement')
+    },
+    listPosts () {
+      this.$store.commit("listPosts")
+      console.log("vindo do vuex", this.$store.state.posts)
+    }
   }
 }
 </script>

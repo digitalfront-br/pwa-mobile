@@ -1,5 +1,5 @@
 <template>
-  <header class=" uk-box-shadow-small uk-padding uk-padding-remove-vertical main-menu">
+  <header class=" uk-box-shadow-small uk-padding uk-padding-remove-vertical main-menu" uk-sticky="show-on-up: true; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
     <div class="uk-navbar uk-container-expand uk-padding-small uk-padding-remove-horizontal menu" uk-navbar>
       <div class="uk-navbar-left">
         <img style="height:45px" src="@/assets/img/logo.svg" alt="" />
